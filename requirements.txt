@@ -1,0 +1,11 @@
+streamlit
+requests
+beautifulsoup4
+lxml
+pandas
+numpy
+transformers>=4.40.0
+torch
+fake-useragent
+wordcloud
+matplotlib
