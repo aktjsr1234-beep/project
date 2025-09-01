@@ -203,11 +203,11 @@ if run:
     labeled, metrics = label_reviews(reviews)
     st.metric("Total", metrics["total"])
     c1, c2 = st.columns(2)
-    c1.metric("Positive", f\"{metrics['positive']} ({metrics['positive_pct']}%)\")
-    c2.metric("Negative", f\"{metrics['negative']} ({metrics['negative_pct']}%)\")
+    c1.metric("Positive", f"{metrics['positive']} ({metrics['positive_pct']}%)")
+    c2.metric("Negative", f"{metrics['negative']} ({metrics['negative_pct']}%)")
     # pie
     fig, ax = plt.subplots(figsize=(4,4))
-    ax.pie([metrics['positive'], metrics['negative']], labels=[f\"Positive ({metrics['positive_pct']}%)\", f\"Negative ({metrics['negative_pct']}%)\"], autopct='%1.1f%%', startangle=90)
+    ax.pie([metrics['positive'], metrics['negative']], labels=[f"Positive ({metrics['positive_pct']}%)", f"Negative ({metrics['negative_pct']}%)"], autopct='%1.1f%%', startangle=90)
     ax.axis('equal')
     st.pyplot(fig)
     # summary
